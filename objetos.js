@@ -35,16 +35,19 @@ console.log(checkCitizenship(ciudadano1));
 // 4.- Crea una función llamada createCitizen que acepta 3 cadenas: nombre, apellido y edad. 
 // Si los parámetros son válidos, debe devolver un nuevo objeto y almacenarlos en un array.
 
-function createCitizen(ciudadanoName,ciudadanoSurname,ciudadanoAge) {
-    const ciudadano2={}
+function createCitizen(name,surname,age) {
+    const ciudadano=[]
 
-    if (ciudadanoName!==String) {ciudadano2.ciudadanoName=ciudadanoName}
+    if (typeof name==="string") {ciudadano.ciudadanoName=name}
     else {'no computable'}
-    if (ciudadanoSurname!==String) {ciudadano2.ciudadanoSurname=ciudadanoSurname}
+    if (typeof surname==="string") {ciudadano.ciudadanoSurname=surname}
     else {'no computable'}
-    if (ciudadanoAge!==String) {ciudadano2.ciudadanoAge=ciudadanoAge}
+    if (typeof age==="string") {ciudadano.ciudadanoAge=age}
     else {'no computable'}
-    return console.log(Object.entries(ciudadano2));
+    console.log(Object.entries(ciudadano));
+    const ciudadano2=Object.assign({},ciudadano)
+
+    return console.log(ciudadano2);
 }
 
 console.log(createCitizen("carl","ferguzon","55"));
