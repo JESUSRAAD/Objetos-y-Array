@@ -55,7 +55,7 @@ const frase = "El perro de San Roque no tiene rabo"
 
 const fraseArray=frase.split(' ')
 console.log(fraseArray);
-const letersArray=fraseArray[1].split('')
+const letersArray=frase.split('')
 
 
 console.log(letersArray);
