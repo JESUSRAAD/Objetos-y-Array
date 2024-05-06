@@ -35,7 +35,7 @@ console.log(classNames[2]);
 //  A continuación, muestra por consolación los nombres ["María, Isidro"] usando slice().
 //  Luego, sustituye "Elizondo" por "Parma" usando splice() y muestra los resultados por consola.
 
-const names = ["Carlos","María","Isidro","Elizondo","Molina"];
+const names = ["Carlos", "María", "Isidro", "Elizondo", "Molina"];
 
 console.log(names.slice(1, 3));
 
@@ -44,19 +44,18 @@ console.log(names);
 
 // 5.- Convierte el array anterior (names) en una cadena de nombres separados por espacios.
 
-const esambleName=names.join(' ');
+const esambleName = names.join(" ");
 
 console.log(esambleName);
 
 // 6.- Crea la variable const frase = "El perro de San Roque no tiene rabo".
 //  A continuación, conviértela en un array de palabras, y, luego, en otro de letras.
 
-const frase = "El perro de San Roque no tiene rabo"
+const frase = "El perro de San Roque no tiene rabo";
 
-const fraseArray=frase.split(' ')
+const fraseArray = frase.split(" ");
 console.log(fraseArray);
-const letersArray=frase.split('')
-
+const letersArray = frase.split("");
 
 console.log(letersArray);
 
@@ -64,21 +63,21 @@ console.log(letersArray);
 //  Una vez lleno mostrará el array y deberá decir cuantos números son pares y cuantos son impares.
 //   La entrada de datos termina cuando el usuario teclea 0 o un valor no numérico. (permite detectar valores no numéricos).
 
-
-let numbers=[]
-let num= ""
-
+let numbers = [];
+let num = "";
 
 function arrayLector(num) {
-numbers.push(num)
+  numbers.push(num);
 
   for (let i = 0; i < numbers.length; i++) {
-   if (numbers[i]%2==0) {
-     
-     console.log(`el numero ${numbers[i]} el numero es par`); 
-   } else {console.log(`el numero ${numbers[i]} el numero es impar`);
-    
-   }
+    if (numbers[i] % 2 == 0) {
+      console.log(`el numero ${numbers[i]} el numero es par`);
+    }
+    else if (numbers[i] % 2 != 0) {
+      console.log(`el numero ${numbers[i]} el numero es impar`);
+    } else {
+      console.log("lo introducido no es numero");
+    }
   }
 }
 console.log(arrayLector(4));
@@ -91,45 +90,46 @@ console.log(arrayLector(7));
 //    con el nombre de la persona encargada del servicio sabiendo el día.
 //     Si le pido servicio('Lunes') me debería decir "Este día se encarga María" y si le pido servicio(Miércoles") me daría Antonia.
 
-let turn=[["lunes","maria"],
-  ["martes","luis"],
- ["miercoles","antonia"] ,
-  ["jueves","pedro"], 
-  ["viernes","marisa"],
-  ["sabado","sin servicio"],
-  ["domingo","sin servicio"]
-]
+let turn = [
+  ["lunes", "maria"],
+  ["martes", "luis"],
+  ["miercoles", "antonia"],
+  ["jueves", "pedro"],
+  ["viernes", "marisa"],
+  ["sabado", "sin servicio"],
+  ["domingo", "sin servicio"],
+];
 
 function worker(dia) {
-  
   for (let i = 0; i < turn.length; i++) {
-   if (turn[i][0]===dia) { return alert(`Este día ${turn[i][0]} se encarga ${turn[i][1]}`);
-    
-}
-}return  alert(" ese dia no es valido");
+    if (turn[i][0] === dia) {
+      return alert(`Este día ${turn[i][0]} se encarga ${turn[i][1]}`);
+    }
+  }
+  return alert(" ese dia no es valido");
 }
 console.log(worker(prompt("ingrese el dia de la semana").toLocaleLowerCase()));
-
-
-
 
 // 9.- Una tienda vende monitores, teclados y ratones. Los precios se almacenan en una array donde estructura cada elemento es un par
 //  [producto - precio]. Diseña una función que recibe como argumento el nombre de un producto (minúscula o mayúscula) y devuelva su precio
 //  si la lista de precios es monitor: 200€, teclado: 20. € ratón: 10€, al pedir precio('monitor') me devolverá 200.
 
-
-let listProducts=[["monitor","200$"],
-  ["teclado","20$"],
- ["raton","10$"] ,
-
-]
+let listProducts = [
+  ["monitor", "200$"],
+  ["teclado", "20$"],
+  ["raton", "10$"],
+];
 
 function price(products) {
-  
   for (let i = 0; i < listProducts.length; i++) {
-   if (listProducts[i][0]===products) {return alert(`Este producto ${listProducts[i][0]} se vende en ${listProducts[i][1]}`);
-    
+    if (listProducts[i][0] === products) {
+      return alert(
+        `Este producto ${listProducts[i][0]} se vende en ${listProducts[i][1]}`
+      );
+    }
   }
-}return alert("no tenemos ese producto");
+  return alert("no tenemos ese producto");
 }
-console.log(price(prompt("producto que le quiera saber el precio").toLocaleLowerCase()));
+console.log(
+  price(prompt("producto que le quiera saber el precio").toLocaleLowerCase())
+);

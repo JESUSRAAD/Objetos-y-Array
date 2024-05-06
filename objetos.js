@@ -44,7 +44,7 @@ function createCitizen(name,surname,age) {
     else {'no computable'}
     if (typeof age==="string") {ciudadano.ciudadanoAge=age}
     else {'no computable'}
-    console.log(Object.entries(ciudadano));
+    Object.entries(ciudadano);
     const ciudadano2=Object.assign({},ciudadano)
 
     return console.log(ciudadano2);
