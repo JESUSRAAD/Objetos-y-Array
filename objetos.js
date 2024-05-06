@@ -42,7 +42,7 @@ function createCitizen(ciudadanoName,ciudadanoSurname,ciudadanoAge) {
     else {'no computable'}
     if (ciudadanoSurname!==String) {ciudadano2.ciudadanoSurname=ciudadanoSurname}
     else {'no computable'}
-    if (ciudadanoAge!=NaN) {ciudadano2.ciudadanoAge=ciudadanoAge}
+    if (ciudadanoAge!==String) {ciudadano2.ciudadanoAge=ciudadanoAge}
     else {'no computable'}
     return console.log(Object.entries(ciudadano2));
 }
